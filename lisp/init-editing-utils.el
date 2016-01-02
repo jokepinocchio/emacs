@@ -1,4 +1,4 @@
-(add-to-list 'load-path (expand-file-name "lisp/editing-utils" user-emacs-directory))
+;; (add-to-list 'load-path (expand-file-name "lisp/editing-utils" user-emacs-directory))
 ;; enhanced help mechanism
 (require-package 'help-fns+)
 (require 'help-fns+)
@@ -31,9 +31,6 @@
  truncate-lines nil
  truncate-partial-width-windows nil
  visible-bell t)
-(set-scroll-bar-mode nil)
-(tool-bar-mode 0)
-
 
 ;; auto-revert
 (global-auto-revert-mode)
@@ -114,14 +111,6 @@
 ;; (global-set-key (kbd "C-c c e") 'mc/edit-ends-of-lines)
 ;; (global-set-key (kbd "C-c c a") 'mc/edit-beginnings-of-lines)
 
-;; switch-window
-(require 'init-switch-window)
-;; Set "C-x p" to select the previous window
-(defun other-window-backward (&optional n)
-  "Select the Nth previous window"
-  (interactive "P")
-  (other-window (- (prefix-numeric-value n))))
-(global-set-key "\C-xp" 'other-window-backward)
 
 
 ;; undo-tree
@@ -134,7 +123,5 @@
 ;; use C-u C-u C-s/r to trigger the flexible search action
 (require 'init-flex-isearch)
 
-;; set some compilation shortcuts
-(require 'init-compile)
 
 (provide 'init-editing-utils)

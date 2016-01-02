@@ -1,4 +1,5 @@
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(require 'init-benchmarking) ;; Measure startup time
 
 (defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
 (defconst *is-a-mac* (eq system-type 'darwin))
@@ -15,7 +16,8 @@
 ;;----------------------------------------------------------------------------
 ;; Bootstrap config
 ;;----------------------------------------------------------------------------
-;; (require 'init-compat)
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+;; (require 'init-compat);;
 (require 'init-utils)
 (require 'init-site-lisp) ;; Must come before elpa, as it may provide package.el
 
@@ -23,10 +25,17 @@
 ;; explicitly call 'package-initialize to set up all packages installed via ELPA.
 ;; should come before all package-related config files
 (require 'init-elpa)
+;;(require 'init-exec-path) ;; Set up $PATH
+
+;;----------------------------------------------------------------------------
+;; Allow users to provide an optional "init-preload-local.el"
+;;----------------------------------------------------------------------------
+(require 'init-preload-local nil t)
 
 ;;----------------------------------------------------------------------------
 ;; Load configs for specific features and modes
 ;;----------------------------------------------------------------------------
+(require 'init-gui-frames)
 (require 'init-dired)
 (require 'init-recentf)
 (require 'init-ido)
@@ -36,12 +45,35 @@
 (require 'init-fonts)
 (require 'init-tabbar)
 (require 'init-editing-utils)
-(require 'init-evil)
+;;(require 'init-evil)
 (require 'init-git)
+(require 'init-compile)
 (require 'init-markdown)
 (require 'init-auctex)
 (require 'init-org)
-;;(require 'init-themes)
 (require 'init-color-theme)
+(require 'init-switch-window)
+
+(when *spell-check-support-enabled*
+  (require 'init-spelling))
+
+;;(require 'init-misc) ;; TODO
+
+;;----------------------------------------------------------------------------
+;; Variables configured via the interactive 'customize' interface
+;;----------------------------------------------------------------------------
+(when (file-exists-p custom-file)
+  (load custom-file))
+
+;;----------------------------------------------------------------------------
+;; Locales (setting them earlier in this file doesn't work in X)
+;;----------------------------------------------------------------------------
+(require 'init-locales)
+
+(add-hook 'after-init-hook
+          (lambda ()
+            (message "init completed in %.2fms"
+                     (sanityinc/time-subtract-millis after-init-time before-init-time))))
 
 (provide 'init)
+;; End
