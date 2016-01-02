@@ -45,7 +45,7 @@
 (require 'init-fonts)
 (require 'init-tabbar)
 (require 'init-editing-utils)
-;;(require 'init-evil)
+(require 'init-evil)
 (require 'init-git)
 (require 'init-compile)
 (require 'init-markdown)

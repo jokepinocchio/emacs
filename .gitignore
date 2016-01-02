@@ -52,3 +52,4 @@ ido.last
 projectile.cache
 .orig
 .unpacked
+/.smex-items
