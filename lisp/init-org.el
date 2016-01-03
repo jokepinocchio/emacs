@@ -64,18 +64,18 @@
      (define-key org-clock-mode-line-map [header-line mouse-2] 'org-clock-goto)
      (define-key org-clock-mode-line-map [header-line mouse-1] 'org-clock-menu)))
 
-(after-load 'org
-  (org-babel-do-load-languages
-   'org-babel-load-languages
-   '((R . t)
-     (emacs-lisp . t)
-     (gnuplot . t)
-     (haskell . nil)
-     (latex . t)
-     (octave . t)
-     (python . t)
-     (ruby . t)
-     (sh . t))))
+;;(after-load 'org
+ ;; (org-babel-do-load-languages
+  ;; 'org-babel-load-languages
+   ;;'((R . t)
+    ;; (emacs-lisp . t)
+    ;; (gnuplot . t)
+    ;; (haskell . nil)
+    ;; (latex . t)
+    ;; (octave . t)
+    ;; (python . t)
+    ;; (ruby . t)
+    ;; (sh . t))))
 
 ;; use org-toc
 (add-hook 'org-mode-hook 'toc-org-enable)

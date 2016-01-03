@@ -16,7 +16,6 @@
  compilation-scroll-output t
  delete-selection-mode t
  grep-scroll-output t
- indent-tabs-mode nil
  line-spacing 0.2
  make-backup-files nil
  mouse-yank-at-point t
@@ -31,6 +30,25 @@
  truncate-lines nil
  truncate-partial-width-windows nil
  visible-bell t)
+
+
+;;; Indent with spaces, not tabs
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+
+;;; Autofill at 79 characters
+(setq-default fill-column 79)
+
+;;; Show only 1 window on startup (useful if you open multiple files)
+(add-hook 'emacs-startup-hook (lambda () (delete-other-windows)) t)
+
+;;; Remove welcome message
+;; Do not work?
+(setq inhibit-startup-message t)
+
+;;; Better frame title with buffer name
+;; Do not work?
+(setq frame-title-format (concat "%b - emacs@" system-name))
 
 ;; auto-revert
 (global-auto-revert-mode)
@@ -55,7 +73,7 @@
 (global-set-key (kbd "<S-return>") 'sanityinc/newline-at-end-of-line)
 
 ;; change yes-or-no to y-or-n
-;; (fset 'yes-or-no-p 'y-or-n-p)
+(fset 'yes-or-no-p 'y-or-n-p)
 
 ;; display time
 (display-time-mode t)
@@ -116,6 +134,23 @@
 ;; undo-tree
 (require 'init-undo-tree)
 (diminish 'undo-tree-mode)
+
+
+;; Highlight line mode on/off
+(global-hl-line-mode 0)
+;; TODO
+(require-package 'highlight-symbol)
+(dolist (hook '(prog-mode-hook html-mode-hook css-mode-hook))
+  (add-hook hook 'highlight-symbol-mode)
+  (add-hook hook 'highlight-symbol-nav-mode))
+(add-hook 'org-mode-hook 'highlight-symbol-nav-mode)
+(after-load 'highlight-symbol
+  (diminish 'highlight-symbol-mode)
+  (defadvice highlight-symbol-temp-highlight (around sanityinc/maybe-suppress activate)
+    "Suppress symbol highlighting while isearching."
+    (unless (or isearch-mode
+                (and (boundp 'multiple-cursors-mode) multiple-cursors-mode))
+      ad-do-it)))
 
 ;; outline-minor-mode
 (require 'init-outl-minor)

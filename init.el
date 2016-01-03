@@ -53,7 +53,7 @@
 (require 'init-org)
 (require 'init-color-theme)
 (require 'init-switch-window)
-
+;;(require 'init-linum)
 (when *spell-check-support-enabled*
   (require 'init-spelling))
 
@@ -77,3 +77,4 @@
 
 (provide 'init)
 ;; End
+(put 'narrow-to-page 'disabled nil)
