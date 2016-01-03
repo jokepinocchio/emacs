@@ -1,4 +1,4 @@
-(require 'color-theme)
+(require-package 'color-theme)
 (require 'color-theme-molokai)
 
 ;; {{ work around color theme bug
