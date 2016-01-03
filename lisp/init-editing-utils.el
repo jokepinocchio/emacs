@@ -129,7 +129,8 @@
 ;; (global-set-key (kbd "C-c c e") 'mc/edit-ends-of-lines)
 ;; (global-set-key (kbd "C-c c a") 'mc/edit-beginnings-of-lines)
 
-
+;;; C-x C-b = ibuffer (better than list-buffers)
+;;(define-key global-map [(control x)(control b)] (function ibuffer))
 
 ;; undo-tree
 (require 'init-undo-tree)

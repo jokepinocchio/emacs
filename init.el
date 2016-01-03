@@ -53,11 +53,11 @@
 (require 'init-org)
 (require 'init-color-theme)
 (require 'init-switch-window)
-;;(require 'init-linum)
+;; (require 'init-linum)
 (when *spell-check-support-enabled*
   (require 'init-spelling))
-
-;;(require 'init-misc) ;; TODO
+;; (require 'init-ibuffer)
+;; (require 'init-misc) ;; TODO
 
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface
