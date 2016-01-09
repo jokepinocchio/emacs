@@ -3,10 +3,10 @@
 
 (defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
 (defconst *is-a-mac* (eq system-type 'darwin))
-(defconst *win32* (eq system-type 'windows-nt))
+(defconst *win32*  (eq system-type 'windows-nt))
 (defconst *cygwin* (eq system-type 'cygwin))
-(defconst *linux* (or (eq system-type 'gnu/linux) (eq system-type 'linux)))
-(defconst *unix* (or *linux* (eq system-type 'usg-unix-v) (eq system-type 'berkeley-unix)))
+(defconst *linux*  (or (eq system-type 'gnu/linux) (eq system-type 'linux)))
+(defconst *unix*   (or *linux* (eq system-type 'usg-unix-v) (eq system-type 'berkeley-unix)))
 
 ;;----------------------------------------------------------------------------
 ;; Temporarily reduce garbage collection during startup
