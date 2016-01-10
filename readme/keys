@@ -1,0 +1,21 @@
+C-q C-l
+添加分割线，如下
+
+
+M-x hexl-mode
+已十六进制查看文件
+
+M-g M-g
+goto line
+
+C-space
+行选择
+C-x space
+列选择
+
+C-x C-t
+交换两行
+
+C-x C-q
+切换read-only-mode
+在dired-mode中可以进入修改模式，批量修改文件名
