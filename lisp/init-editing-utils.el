@@ -46,10 +46,6 @@
 ;; Do not work?
 (setq inhibit-startup-message t)
 
-;;; Better frame title with buffer name
-;; Do not work?
-(setq frame-title-format (concat "%b - emacs@" system-name))
-
 ;; auto-revert
 (global-auto-revert-mode)
 (setq global-auto-revert-non-file-buffers t
@@ -77,23 +73,6 @@
 
 ;; share clipboard
 (setq x-select-enable-clipboard t)
-
-;; display time
-(display-time-mode t)
-(setq display-time-24hr-format t)
-
-;; display line number
-;; (require 'linum)
-(require-package 'hlinum)
-;; (require 'hlinum)
-(hlinum-activate)
-(global-linum-mode t)
-
-;; visual line
-(global-visual-line-mode t)
-;; (diminish 'global-visual-line-mode)
-(diminish 'visual-line-mode)
-
 ;; expand-region
 (require-package 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
@@ -155,7 +134,6 @@
     (unless (or isearch-mode
                 (and (boundp 'multiple-cursors-mode) multiple-cursors-mode))
       ad-do-it)))
-
 ;; outline-minor-mode
 (require 'init-outl-minor)
 
