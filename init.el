@@ -57,6 +57,7 @@
 (require 'init-org)
 (require 'init-color-theme)
 (require 'init-switch-window)
+;;(require 'init-windows)
 ;; (require 'init-linum)
 (when *spell-check-support-enabled*
   (require 'init-spelling))
