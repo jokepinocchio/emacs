@@ -50,9 +50,9 @@
 (require 'init-tabbar)
 (require 'init-editing-utils)
 (require 'init-evil)
-(require 'init-git)
+;;(require 'init-git)
 (require 'init-compile)
-(require 'init-markdown)
+;;(require 'init-markdown)
 (require 'init-auctex)
 (require 'init-org)
 (require 'init-color-theme)
@@ -85,4 +85,4 @@
 
 (provide 'init)
 ;; End
-(put 'narrow-to-page 'disabled nil)
+
