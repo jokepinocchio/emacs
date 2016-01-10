@@ -62,7 +62,7 @@
   (require 'init-spelling))
 ;; (require 'init-ibuffer)
 ;; (require 'init-misc) ;; TODO
-
+(require 'init-cscope)
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface
 ;;----------------------------------------------------------------------------

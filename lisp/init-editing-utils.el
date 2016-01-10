@@ -75,6 +75,9 @@
 ;; change yes-or-no to y-or-n
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;; share clipboard
+(setq x-select-enable-clipboard t)
+
 ;; display time
 (display-time-mode t)
 (setq display-time-24hr-format t)
