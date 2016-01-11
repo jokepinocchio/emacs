@@ -58,6 +58,7 @@
 (require 'init-color-theme)
 (require 'init-switch-window)
 (require 'init-window-numbering)
+(require 'init-google-c-style)
 
 ;;(require 'init-windows)
 ;; (require 'init-linum)

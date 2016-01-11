@@ -39,6 +39,19 @@
 ;;; Autofill at 79 characters
 (setq-default fill-column 79)
 
+(defun go-to-char (n char)
+    "Move forward to Nth occurence of CHAR.
+    Typing `go-to-char-key' again will move forwad to the next Nth
+    occurence of CHAR."
+    (interactive "p\ncGo to char: ")
+    (search-forward (string char) nil nil n)
+    (while (char-equal (read-char)
+                       char)
+      (search-forward (string char) nil nil n))
+    (setq unread-command-events (list last-input-event)))
+(define-key global-map (kbd "C-x a") 'go-to-char)
+
+
 ;;; Show only 1 window on startup (useful if you open multiple files)
 (add-hook 'emacs-startup-hook (lambda () (delete-other-windows)) t)
 
