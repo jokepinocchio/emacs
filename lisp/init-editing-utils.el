@@ -118,9 +118,6 @@
 (require 'init-undo-tree)
 (diminish 'undo-tree-mode)
 
-
-;; Highlight line mode on/off
-(global-hl-line-mode 0)
 ;; TODO
 (require-package 'highlight-symbol)
 (dolist (hook '(prog-mode-hook html-mode-hook css-mode-hook))

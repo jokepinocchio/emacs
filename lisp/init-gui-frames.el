@@ -69,10 +69,10 @@
     ;; '(:eval (format "Proj[%s] " (projectile-project-name)))
 
     ;; add the time, with the date and the emacs uptime in the tooltip
-    '(:eval (propertize (format-time-string "%H:%M:%S")
+    '(:eval (propertize (format-time-string "%H:%M") ;;delete :%S
                         'face 'font-lock-type-face
                         'help-echo
-                        (concat (format-time-string "%Y-%02m-%02d %02H:%02M:%02S %Y-%02m-%02d %3a; ")
+                        (concat (format-time-string "%Y/%02m/%02d %02H:%02M:%02S %Y-%02m-%02d %3a; ")
                                 (emacs-uptime "Uptime:%hh"))))
 
     ;; show buffer file name
@@ -82,27 +82,34 @@
     " "
 
     ;; date
-    '(:eval (propertize (format-time-string "%Y-%02m-%02d %3a")
+    '(:eval (propertize (format-time-string "%Y/%02m/%02d/%3a")
                         'face 'font-lock-comment-face))
 
 
     " --"
     ;; i don't want to see minor-modes; but if you want, uncomment this:
     minor-mode-alist  ;; list of minor modes
-    "%-" ;; fill with '-'
+    ;"%-" ;; fill with '-'
 
-    ;; mode-line-modes mode-line-misc-info mode-line-end-spaces
+    "line %l " ;;for test
+    "-- user: "
+    (getenv "USER")
     ))
   )
 (my-mode-line)
 
-;; display line number
-;; (require 'linum)
-;(require-package 'hlinum)
-;(require 'hlinum)
-;(hlinum-activate)
+; display line number
+; (require 'linum)
+(require-package 'hlinum)
+(require 'hlinum)
+(hlinum-activate)
 (global-linum-mode t)
 
+;; Highlight line mode on/off
+;; hl-line.el
+(global-hl-line-mode t)
+(set-face-background 'hl-line "#0000ff")
+(set-face-foreground 'highlight nil)
 ;; visual line
 (global-visual-line-mode t)
 ;;(diminish 'global-visual-line-mode)
