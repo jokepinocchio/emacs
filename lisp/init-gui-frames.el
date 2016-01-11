@@ -110,6 +110,7 @@
 (global-hl-line-mode t)
 (set-face-background 'hl-line "#0000ff")
 (set-face-foreground 'highlight nil)
+
 ;; visual line
 (global-visual-line-mode t)
 ;;(diminish 'global-visual-line-mode)
