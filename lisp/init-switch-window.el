@@ -1,6 +1,7 @@
+
 (require-package 'switch-window)
 
-;; (require 'switch-window-autoloads)
+(require 'switch-window)
 ;; Set "C-x p" to select the previous window
 (defun other-window-backward (&optional n)
   "Select the Nth previous window"
