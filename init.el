@@ -40,6 +40,7 @@
 ;; Load configs for specific features and modes
 ;;----------------------------------------------------------------------------
 (require 'init-gui-frames)
+(require 'init-highlight)
 (require 'init-dired)
 (require 'init-recentf)
 (require 'init-ido)

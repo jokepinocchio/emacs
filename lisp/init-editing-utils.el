@@ -144,6 +144,7 @@
     (unless (or isearch-mode
                 (and (boundp 'multiple-cursors-mode) multiple-cursors-mode))
       ad-do-it)))
+
 ;; outline-minor-mode
 (require 'init-outl-minor)
 
