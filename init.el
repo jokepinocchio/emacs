@@ -69,6 +69,7 @@
 ;; (require 'init-ibuffer)
 ;; (require 'init-misc) ;; TODO
 (require 'init-imenu)
+(require 'init-recent-jump)
 (require 'init-cscope)
 (require 'init-rtags)
 ;;----------------------------------------------------------------------------
