@@ -1,3 +1,5 @@
+;; indent-region
+;; C-M-\
 (require-package 'google-c-style)
 (require 'google-c-style)
 

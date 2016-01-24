@@ -68,6 +68,7 @@
   (require 'init-spelling))
 ;; (require 'init-ibuffer)
 ;; (require 'init-misc) ;; TODO
+(require 'init-imenu)
 (require 'init-cscope)
 (require 'init-rtags)
 ;;----------------------------------------------------------------------------
