@@ -40,7 +40,7 @@
 ;;;      C-c s I         make cscope.* files
 ;;;
 ;;;
-;;; not require install xcscope in package, instead it use cscope src xcscope.el
+;;; not require install xcscope in package, instead it use xcscope.el that in cscope src.
 ;;(require-package 'xcscope)
 
 ;; only use xcscope in c/c++ mode
