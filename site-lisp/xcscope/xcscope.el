@@ -2487,5 +2487,6 @@ file."
 (add-hook 'c-mode-hook (function cscope:hook))
 (add-hook 'c++-mode-hook (function cscope:hook))
 (add-hook 'dired-mode-hook (function cscope:hook))
+(add-hook 'java-mode-hook (function cscope:hook))
 
 (provide 'xcscope)
