@@ -72,6 +72,7 @@
 (require 'init-recent-jump)
 (require 'init-cscope)
 (require 'init-rtags)
+(require 'init-neotree) ;like vim NERDTree
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface
 ;;----------------------------------------------------------------------------
