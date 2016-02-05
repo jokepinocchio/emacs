@@ -6,7 +6,8 @@
 (defconst *windows*  (eq system-type 'windows-nt))
 (defconst *cygwin* (eq system-type 'cygwin))
 (defconst *linux*  (or (eq system-type 'gnu/linux) (eq system-type 'linux)))
-(defconst *unix*   (or *linux* (eq system-type 'usg-unix-v) (eq system-type 'berkeley-unix)))
+(defconst *unix*   (or *linux* (eq system-type 'usg-unix-v)
+                       (eq system-type 'berkeley-unix)))
 
 ;;----------------------------------------------------------------------------
 ;; Temporarily reduce garbage collection during startup
@@ -62,17 +63,18 @@
 (require 'init-google-c-style)
 
 ;;(require 'init-windows)
-;; (require 'init-linum)
+;;(require 'init-linum)
 
 (when *spell-check-support-enabled*
   (require 'init-spelling))
-;; (require 'init-ibuffer)
-;; (require 'init-misc) ;; TODO
+;;(require 'init-ibuffer)
+;;(require 'init-misc) ;; TODO
 (require 'init-imenu)
 (require 'init-recent-jump)
 (require 'init-cscope)
 (require 'init-rtags)
 (require 'init-neotree) ;like vim NERDTree
+;;(require 'init-gdb)
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface
 ;;----------------------------------------------------------------------------
