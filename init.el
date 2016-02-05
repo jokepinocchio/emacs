@@ -40,6 +40,7 @@
 ;;----------------------------------------------------------------------------
 ;; Load configs for specific features and modes
 ;;----------------------------------------------------------------------------
+(require 'init-editing-utils)
 (require 'init-gui-frames)
 (require 'init-highlight)
 (require 'init-dired)
@@ -50,7 +51,6 @@
 (require 'init-auto-complete)
 (require 'init-fonts)
 (require 'init-tabbar)
-(require 'init-editing-utils)
 (require 'init-evil)
 ;;(require 'init-git)
 (require 'init-compile)
