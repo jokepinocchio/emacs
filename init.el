@@ -75,6 +75,7 @@
 (require 'init-rtags)
 (require 'init-neotree) ;like vim NERDTree
 ;;(require 'init-gdb)
+(require 'init-helm)
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface
 ;;----------------------------------------------------------------------------
