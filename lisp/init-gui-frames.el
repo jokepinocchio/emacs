@@ -89,11 +89,13 @@
     " --"
     ;; i don't want to see minor-modes; but if you want, uncomment this:
     minor-mode-alist  ;; list of minor modes
-    ;"%-" ;; fill with '-'
+    " --"
+    '(vc-mode vc-mode)
+    "%-" ;; fill with '-'
 
-    "line %l " ;;for test
-    "-- user: "
-    (getenv "USER")
+;;    "line %l " ;;for test
+;;    "-- user: "
+;;    (getenv "USER")
     ))
   )
 (my-mode-line)
