@@ -76,6 +76,9 @@
 (require 'init-neotree) ;like vim NERDTree
 ;;(require 'init-gdb)
 (require 'init-helm)
+(require 'init-projectile)
+;;(require 'init-smex)
+(require 'init-semantic)
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface
 ;;----------------------------------------------------------------------------
