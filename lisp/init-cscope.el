@@ -47,6 +47,9 @@
 ;;(add-hook 'c-mode-common-hook
 ;;          '(lambda ()
 ;;             (require 'xcscope)))
+;;(require-package 'xcscope)
+;;(require-package 'helm-cscope)
+
 (require 'xcscope)
 
 (provide 'init-cscope)

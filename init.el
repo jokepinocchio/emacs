@@ -72,6 +72,7 @@
 (require 'init-imenu)
 (require 'init-recent-jump)
 (require 'init-cscope)
+(require 'init-gtags)
 (require 'init-rtags)
 (require 'init-neotree) ;like vim NERDTree
 ;;(require 'init-gdb)

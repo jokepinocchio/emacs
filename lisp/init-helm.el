@@ -1,5 +1,16 @@
 (require-package 'helm)
+(require-package 'helm-projectile)
+(require-package 'helm-ag)
+
+
+(require 'helm)
+(require 'helm-projectile)
+(require 'helm-ag)
 (require 'helm-config)
+
+
+(global-set-key (kbd "C-x b") 'helm-mini)
+(global-set-key (kbd "C-x C-b") 'helm-projectile-find-file)
 
 (autoload 'helm-c-yas-complete "helm-c-yasnippet" nil t)
 (global-set-key (kbd "C-x C-o") 'ffap)
