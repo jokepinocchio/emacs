@@ -1,3 +1,4 @@
+
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (require 'init-benchmarking) ;; Measure startsup time
 
@@ -95,6 +96,8 @@
           (lambda ()
             (message "init completed in %.2fms"
                      (sanityinc/time-subtract-millis after-init-time before-init-time))))
+
+
 
 (provide 'init)
 ;; End
