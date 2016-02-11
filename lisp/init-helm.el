@@ -1,3 +1,15 @@
+;; in minibuffer
+;; C-s   grep
+;; C-n/C-p
+;; C-v/M-v
+;; C-k   return root dir
+;; C-l   return up dir
+;; M-D   kill buffer
+;; M-R   rename
+;; M-C   copy
+;; M-S   create soft link
+;; M-H   create hard link
+
 (require-package 'helm)
 (require-package 'helm-projectile)
 (require-package 'helm-ag)
