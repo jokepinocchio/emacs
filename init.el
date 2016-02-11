@@ -80,7 +80,8 @@
 (require 'init-helm)
 (require 'init-projectile)
 ;;(require 'init-smex)
-(require 'init-semantic)
+;;(require 'init-semantic)
+;;(require 'init-speedbar)
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface
 ;;----------------------------------------------------------------------------
