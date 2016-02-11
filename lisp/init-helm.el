@@ -23,6 +23,8 @@
 
 (global-set-key (kbd "C-x b") 'helm-mini)
 (global-set-key (kbd "C-x C-b") 'helm-projectile-find-file)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(setq helm-M-x-fuzzy-match t)
 
 (autoload 'helm-c-yas-complete "helm-c-yasnippet" nil t)
 (global-set-key (kbd "C-x C-o") 'ffap)
