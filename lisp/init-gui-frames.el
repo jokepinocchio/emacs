@@ -98,7 +98,7 @@
 ;;    (getenv "USER")
     ))
   )
-(my-mode-line)
+;;(my-mode-line)
 
 ; display line number
 ; (require 'linum)
