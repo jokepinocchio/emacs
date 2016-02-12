@@ -152,4 +152,14 @@
 (require 'init-flex-isearch)
 
 
+(require 'hideif)
+(setq hide-ifdef-initially t)
+;;(setq hide-ifdef-shadow t)
+g(add-hook 'c-mode-common-hook
+          (lambda()
+            (setq hide-ifdef-shadow t)
+            (setq hide-ifdef-mode t)
+            (hide-ifdefs)
+            ))
+
 (provide 'init-editing-utils)
