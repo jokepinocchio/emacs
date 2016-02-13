@@ -52,7 +52,7 @@
 (require 'init-auto-complete)
 (require 'init-fonts)
 (require 'init-tabbar)
-(require 'init-evil)
+;;(require 'init-evil)
 ;;(require 'init-git)
 (require 'init-compile)
 ;;(require 'init-markdown)

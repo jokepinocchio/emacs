@@ -3,8 +3,6 @@
 (require 'color-theme-molokai)
 
 
-
-
 ;; {{ work around color theme bug
 ;; @see https://plus.google.com/106672400078851000780/posts/KhTgscKE8PM
 (defadvice load-theme (before disable-themes-first activate)
