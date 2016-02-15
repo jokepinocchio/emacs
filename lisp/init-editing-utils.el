@@ -145,6 +145,8 @@
                 (and (boundp 'multiple-cursors-mode) multiple-cursors-mode))
       ad-do-it)))
 
+(global-set-key (kbd "M-P") 'highlight-symbol-prev)
+(global-set-key (kbd "M-N") 'highlight-symbol-next)
 ;; outline-minor-mode
 (require 'init-outl-minor)
 
