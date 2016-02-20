@@ -28,7 +28,7 @@
 
 
 ;;; Highlight the line where the cursor is
-(global-hl-line-mode t)
+(global-hl-line-mode 0)
 (set-face-background 'hl-line "#cd00cd")
 (set-face-foreground 'highlight nil)
 
